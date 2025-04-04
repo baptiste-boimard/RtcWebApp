@@ -13,9 +13,9 @@ services:
       - "traefik.http.services.rtcwebapp.loadbalancer.server.scheme=https"
       - "traefik.http.services.rtcwebapp.loadbalancer.server.insecureSkipVerify=true"
     networks:
-      - traefik
+      - traefik_proxy
     restart: unless-stopped
 
 networks:
-  traefik:
+  traefik_proxy:
     external: true
