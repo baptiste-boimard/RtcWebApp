@@ -4,6 +4,18 @@ services:
   rtcwebapp:
     build: .
     container_name: rtcwebapp
-    ports:
-      - "7162:7162"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.rtcwebapp.rule=Host(`cam.punkydev.fr`)"
+      - "traefik.http.routers.rtcwebapp.entrypoints=websecure"
+      - "traefik.http.routers.rtcwebapp.tls.certresolver=letsencrypt"
+      - "traefik.http.services.rtcwebapp.loadbalancer.server.port=7162"
+      - "traefik.http.services.rtcwebapp.loadbalancer.server.scheme=https"
+      - "traefik.http.services.rtcwebapp.loadbalancer.server.insecureSkipVerify=true"
+    networks:
+      - traefik
     restart: unless-stopped
+
+networks:
+  traefik:
+    external: true
