@@ -4,20 +4,6 @@ services:
   rtcwebapp:
     build: .
     container_name: rtcwebapp
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.rtcwebapp.rule=Host(`cam.punkydev.fr`)"
-      - "traefik.http.routers.rtcwebapp.entrypoints=websecure"
-      - "traefik.http.routers.rtcwebapp.tls.certresolver=letsencrypt"
-      - "traefik.http.services.rtcwebapp.loadbalancer.server.port=7162"
-      - "traefik.http.services.rtcwebapp.loadbalancer.server.scheme=https"
-      - "traefik.http.services.rtcwebapp.loadbalancer.server.insecureSkipVerify=true"
-    expose:
-      - "7162"
-    networks:
-      - traefik_proxy
+    ports:
+      - "7162:7162"  # Expose le HTTPS
     restart: unless-stopped
-
-networks:
-  traefik_proxy:
-    external: true

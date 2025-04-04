@@ -10,4 +10,6 @@ RUN dotnet publish -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
+COPY cert.pem .
+COPY key.pem .
 ENTRYPOINT ["dotnet", "RtcWebApp.dll"]
