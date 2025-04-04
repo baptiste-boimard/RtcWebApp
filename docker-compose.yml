@@ -5,5 +5,5 @@ services:
     build: .
     container_name: rtcwebapp
     ports:
-      - "5450:5450"
+      - "5085:5085"
     restart: unless-stopped
