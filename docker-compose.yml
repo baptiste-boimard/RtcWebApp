@@ -12,6 +12,8 @@ services:
       - "traefik.http.services.rtcwebapp.loadbalancer.server.port=7162"
       - "traefik.http.services.rtcwebapp.loadbalancer.server.scheme=https"
       - "traefik.http.services.rtcwebapp.loadbalancer.server.insecureSkipVerify=true"
+    expose:
+      - "7162"
     networks:
       - traefik_proxy
     restart: unless-stopped
