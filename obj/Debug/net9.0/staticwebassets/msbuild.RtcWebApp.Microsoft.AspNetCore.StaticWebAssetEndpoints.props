@@ -1,0 +1,28 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/RtcWebApp/receive.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\receive.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-T\u002B\u002BBnr9SB8tP/C1TctI3rweEBKsqs4erEYQgLkjNYi8="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1187"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022T\u002B\u002BBnr9SB8tP/C1TctI3rweEBKsqs4erEYQgLkjNYi8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:02:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/RtcWebApp/receive.r1hk0nqwn6.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\receive.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r1hk0nqwn6"},{"Name":"integrity","Value":"sha256-T\u002B\u002BBnr9SB8tP/C1TctI3rweEBKsqs4erEYQgLkjNYi8="},{"Name":"label","Value":"_content/RtcWebApp/receive.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1187"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022T\u002B\u002BBnr9SB8tP/C1TctI3rweEBKsqs4erEYQgLkjNYi8=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:02:58 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/RtcWebApp/send.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\send.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-oXFZvGvFNi3MFvtX\u002B9v2I1UsX7Rdn5m1sX75A/5dQB4="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1277"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022oXFZvGvFNi3MFvtX\u002B9v2I1UsX7Rdn5m1sX75A/5dQB4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:02:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/RtcWebApp/send.vggodmaxt5.html">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\send.html'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vggodmaxt5"},{"Name":"integrity","Value":"sha256-oXFZvGvFNi3MFvtX\u002B9v2I1UsX7Rdn5m1sX75A/5dQB4="},{"Name":"label","Value":"_content/RtcWebApp/send.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1277"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022oXFZvGvFNi3MFvtX\u002B9v2I1UsX7Rdn5m1sX75A/5dQB4=\u0022"},{"Name":"Last-Modified","Value":"Fri, 04 Apr 2025 08:02:42 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

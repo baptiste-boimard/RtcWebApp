@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\bapti\\RiderProjects\\rtc\\RtcWebApp\\RtcWebApp\\wwwroot\\receive.html",
+      "PackagePath": "staticwebassets\\receive.html"
+    },
+    {
+      "Id": "C:\\Users\\bapti\\RiderProjects\\rtc\\RtcWebApp\\RtcWebApp\\wwwroot\\send.html",
+      "PackagePath": "staticwebassets\\send.html"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.RtcWebApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.RtcWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.RtcWebApp.props",
+      "PackagePath": "build\\RtcWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.RtcWebApp.props",
+      "PackagePath": "buildMultiTargeting\\RtcWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.RtcWebApp.props",
+      "PackagePath": "buildTransitive\\RtcWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

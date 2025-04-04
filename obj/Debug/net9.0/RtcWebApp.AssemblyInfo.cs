@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RtcWebApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4682156515532418e05f1b4e9312c2ec4772e577")]
 [assembly: System.Reflection.AssemblyProductAttribute("RtcWebApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RtcWebApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
