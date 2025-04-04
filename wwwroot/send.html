@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head><title>Send</title></head>
+<body>
+<video id="localVideo" autoplay muted></video>
+<script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script>
+    const video = document.getElementById('localVideo');
+    const conn = new signalR.HubConnectionBuilder().withUrl('/webrtc').build();
+    const peer = new RTCPeerConnection();
+
+    navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+        .then(stream => {
+            video.srcObject = stream;
+            stream.getTracks().forEach(track => peer.addTrack(track, stream));
+            return peer.createOffer();
+        })
+        .then(offer => peer.setLocalDescription(offer))
+        .then(() => conn.invoke("SendOffer", JSON.stringify(peer.localDescription)));
+
+    conn.on("ReceiveAnswer", answer =>
+        peer.setRemoteDescription(new RTCSessionDescription(JSON.parse(answer)))
+    );
+
+    peer.onicecandidate = e => {
+        if (e.candidate)
+            conn.invoke("SendCandidate", JSON.stringify(e.candidate));
+    };
+
+    conn.on("ReceiveCandidate", candidate =>
+        peer.addIceCandidate(new RTCIceCandidate(JSON.parse(candidate)))
+    );
+
+    conn.start();
+</script>
+</body>
+</html>

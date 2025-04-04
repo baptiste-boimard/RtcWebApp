@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><title>Receive</title></head>
+<body>
+<video id="remoteVideo" autoplay controls></video>
+<script src="https://cdn.jsdelivr.net/npm/@microsoft/signalr/dist/browser/signalr.min.js"></script>
+<script>
+    const video = document.getElementById('remoteVideo');
+    const conn = new signalR.HubConnectionBuilder().withUrl('/webrtc').build();
+    const peer = new RTCPeerConnection();
+
+    conn.on("ReceiveOffer", offer => {
+        const offerDesc = new RTCSessionDescription(JSON.parse(offer));
+        peer.setRemoteDescription(offerDesc)
+            .then(() => peer.createAnswer())
+            .then(answer => peer.setLocalDescription(answer))
+            .then(() => conn.invoke("SendAnswer", JSON.stringify(peer.localDescription)));
+    });
+
+    peer.ontrack = e => {
+        video.srcObject = e.streams[0];
+    };
+
+    peer.onicecandidate = e => {
+        if (e.candidate)
+            conn.invoke("SendCandidate", JSON.stringify(e.candidate));
+    };
+
+    conn.on("ReceiveCandidate", candidate =>
+        peer.addIceCandidate(new RTCIceCandidate(JSON.parse(candidate)))
+    );
+
+    conn.start();
+</script>
+</body>
+</html>
